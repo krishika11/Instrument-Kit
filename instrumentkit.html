@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Instrument kit</title>
+  <link rel="stylesheet"
+  href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend+Exa:wght@100..900&family=Sofia&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <h1 id="title">Instrument 🥁 Kit</h1>
+  <div class="set">
+    <button class="w drum">w</button>
+    <button class="a drum">a</button>
+    <button class="s drum">s</button>
+    <button class="d drum">d</button>
+    <button class="j drum">j</button>
+    <button class="k drum">k</button>
+    <button class="l drum">l</button>
+    <button class="stop">Stop sounds</button>
+  </div>
+
+
+  <script>
+    document.querySelector('.stop').addEventListener('click', stopSounds)
+    document.querySelector('button').addEventListener('click', violinSound)
+    document.querySelector('.a').addEventListener('click', guitarSound);
+    document.querySelector('.s').addEventListener('click', pianoSound);
+    document.querySelector('.d').addEventListener('click', trumpetSound);
+    document.querySelector('.j').addEventListener('click', drumSound);
+    document.querySelector('.k').addEventListener('click', fluteSound);
+    document.querySelector('.l').addEventListener('click', celloSound);
+    function stopSounds(){
+      audio.pause();
+      audio.currentTime = 0;
+      audio2.pause();
+      audio2.currentTime = 0
+      audio3.pause();
+      audio3.currentTime = 0
+      audio4.pause();
+      audio4.currentTime = 0
+      audio5.pause();
+      audio5.currentTime = 0
+      audio6.pause();
+      audio6.currentTime = 0
+      audio7.pause();
+      audio7.currentTime = 0
+    }
+    var audio = new Audio('violin-music-64019.mp3')
+    function violinSound(){
+      audio.play();
+    }
+    var audio2 = new Audio('acoustic-guitar-loop-f-91bpm-132687.mp3');
+    function guitarSound(){
+      audio2.play();
+    }
+    var audio3 = new Audio('piano-chords-239967.mp3')
+    function pianoSound(){
+      audio3.play()
+    }
+    var audio4 = new Audio('trumpet-75426.mp3')
+    function trumpetSound(){
+      audio4.play()
+    }
+    var audio5 = new Audio('noise-drum-loop-134bpm-245852.mp3')
+    function drumSound(){
+      audio5.play()
+    }
+    var audio6 = new Audio('dizi-flute-02-72563.mp3')
+    function fluteSound(){
+      audio6.play()
+    }
+    var audio7 = new Audio('spirit-cello-77111.mp3')
+    function celloSound(){
+      audio7.play()
+    }
+  </script>
+</body>
+
+</html>
